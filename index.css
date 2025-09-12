@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+p {
+  margin: 0px;
+}
+
+.header {
+  background-image: url("head.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.boxContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottom: 10px;
+}
+
+.box {
+  flex: 1;
+  margin: 0 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.boxPaid {
+  flex: 1;
+  background: #d4edda;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(254, 254, 254, 0.1);
+  text-align: center;
+
+  }
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.paid {
+  color: green;
+  font-weight: bold;
+}
+.day {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.day-header {
+  padding: 15px;
+  background-color: #004d99;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.day-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.day-header span {
+  font-size: 0.9em;
+  text-align: right;
+}
+.day-content {
+  display: none;
+  padding: 15px;
+  background-color: #fafafa;
+}
+.day-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.day-content li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.day-content li:last-child {
+  border-bottom: none;
+}
+.day-content a {
+  color: #004d99;
+  text-decoration: none;
+  font-weight: bold;
+}
+.day-content a:hover {
+  text-decoration: underline;
+}
