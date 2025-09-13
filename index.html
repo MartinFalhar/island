@@ -8,12 +8,89 @@
   </head>
   <body>
     <div class="container">
+      <!--  Hlavička  -->
       <div class="header">
         <h1 style="text-align: center; color: #ffffff">ISLAND 2025</h1>
       </div>
+
+      <!--  Informace o Islandu  -->
+      <div class="day">
+        <div class="day-header" style="background-color: blueviolet">
+          Informace o Islandu
+        </div>
+
+        <div class="day-content">
+          <div class="box">
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+              }
+              label,
+              input,
+              p {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                display: block;
+              }
+              input {
+                padding: 8px;
+                width: 100%;
+                box-sizing: border-box;
+              }
+              .result {
+                font-weight: bold;
+                color: darkgreen;
+                margin-top: 10px;
+              }
+            </style>
+            <label for="isk">Částka v ISK (kurz 0.17):</label>
+            <input type="number" id="isk" placeholder="např. 1000" />
+            <p class="result"><span id="czk">0</span> Kč</p>
+            <script>
+              const input = document.getElementById("isk");
+              const output = document.getElementById("czk");
+              const kurz = 0.17; // 1 ISK = 0,17 CZK
+
+              input.addEventListener("input", () => {
+                const hodnota = parseFloat(input.value) || 0;
+                const czk = hodnota * kurz;
+                output.textContent = czk.toFixed(0); // 2 desetinná místa
+              });
+            </script>
+          </div>
+
+          <div class="box">
+            <a
+              href="https://www.google.com/maps/place/Iceland/@64.7708281,-24.5170635,6z/"
+              >Google mapy</a
+            >
+          </div>
+
+          <div class="box">
+            <a
+              href="https://mapy.com/cs/zakladni?l=1&q=Island&source=osm&id=352&ds=2&x=-18.9090619&y=65.1883122&z=7"
+              >Mapy.cz</a
+            >
+          </div>
+
+          <div class="box">
+            <a href="asset/srovnani.pdf">Srovnání Česka a Islandu</a>
+          </div>
+
+          <div class="box">
+            <a href="https://cs.wikipedia.org/wiki/Island">Wikipedia Island</a>
+          </div>
+        </div>
+      </div>
+
+      <!--  Neděle 21.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Neděle 21.9. - Aurora Hotel</h3>
+          <div style="text-align: left">
+            <h3>Neděle 21.9.</h3>
+            <h3>Aurora Hotel, Keflavík</h3>
+          </div>
           <span>přílet</span>
         </div>
         <div class="day-content">
@@ -21,169 +98,282 @@
             <a href="asset/GO Parking - Island.pdf">GO parking</a>
           </div>
           <p>
-            <strong>Let OG535 4h 5min</strong> .... 21:50 Václav Havel Airport
-            Prague > 23:55 Keflavík Island
+            <strong>Let OG535 4h 5min</strong>
           </p>
-          <p>
-            !Priority boarding ... Příruční zavazadlo: 10 kg 42x32x25 cm ...
-            Zavazadlo: 20 kg
-          </p>
+          <p>odlet 21:50 V. Havel Praha</p>
+          <p>přílet 23:55 Keflavík Island</p>
+          <p>Priority boarding</p>
+          <p>Příruční taška: 10 kg 42x32x25 cm</p>
+          <p>Velké zavazadlo: 20 kg</p>
           <div class="boxContainer">
             <div class="box">
               <a href="asset/[PLAY] Successful payment - Falhar Martin.pdf"
-                >Letenka Martin</a>
+                >Letenka Martin</a
+              >
             </div>
             <div class="box">
               <a href="asset/[PLAY] Successful payment - Falharová Alena.pdf"
                 >Letenka Alenka</a
               >
             </div>
+          </div>
+          <div class="boxContainer">
             <div class="box">
               <a href="asset/[PLAY] Successful payment - Vystrčil Petr.pdf"
-                >Letenka Petr</a>
+                >Letenka Petr</a
+              >
             </div>
             <div class="box">
               <a href="asset/[PLAY] Successful payment - Vystrčilová Eva.pdf"
-                >Letenka Eva</a>
+                >Letenka Eva</a
+              >
             </div>
           </div>
+          <p>
+            <strong>Aurora Hotel at Reykjavik-Keflavik Airport Terminal</strong>
+            Blikavöllur 2, 235 Keflavík, Island
+          </p>
           <div class="boxContainer">
             <div class="box">
               <a href="asset/21-Aurora-Keflavík.pdf">Hotel</a>
             </div>
             <div class="box">
-                <a href="https://maps.app.goo.gl/ZzJNL3tqA9tW29ec9">Poloha</a>                
+              <a href="https://maps.app.goo.gl/ZzJNL3tqA9tW29ec9">Poloha</a>
             </div>
             <div class="boxPaid">
-                <p class="paid">Platil Petr</p>
+              <p class="paid">Placeno Petr</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!--  Pondělí 22.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Pondělí 22.9. - Hotel Gullfoss</h3>
+          <div style="text-align: left">
+            <h3>Pondělí 22.9.</h3>
+            <h3>Hotel Gullfoss, Brattholt</h3>
+          </div>
           <span>~160 km, cca 2h jízdy</span>
         </div>
         <div class="day-content">
+          <h3>Autopůjčovna Lotus Car Rental</h3>
+          <div class="box">
+            <a href="https://www.lotuscarrental.is/client">Správa rezervace</a>
+          </div>
+          <img src="asset/jeep.png" alt="Jeep Compas" />
+          <div class="box">
+            <a href="asset/lotuscar-Martin.pdf">
+              Martin: Reservation #139434
+            </a>
+          </div>
+          <div class="box">Petr: Reservation #??????</div>
+          <p>Pick up: 22.9. 9:00 Keflavík</p>
+          <p>Drop off: 30.9. 7:00 Keflavík</p>
+          <p>Jeep Compass 4x4</p>
+          <p>Platinum Insurance</p>
+          <p>Iceland Road Map</p>
+          <p>GPS, Extra Driver</p>
+
+          <div class="box">
+            <a href="https://maps.app.goo.gl/jKQ2gZ7hQf4LdrYY6"
+              >Trasa Keflavík > Brattholt</a
+            >
+          </div>
+
           <ul>
             <li>
               <strong>Jezero Kleifarvatn:</strong> Krásné jezero sopečného
               původu s dramatickou scenérií.
-              <a href="https://goo.gl/maps/b3j6j6y7Z4F2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/Q5AjpQkr16wDUeso9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Geotermální oblast Seltún (Krýsuvík):</strong> Barevné
               bahno, geotermální prameny a sirné výpary.
-              <a href="https://goo.gl/maps/x6j7yJ8zL8A2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/tB584pQrSNaSww7J7"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Kostel Hveragerði (Hveragerðiskirkja):</strong> Moderní
               kostel s krásnou architekturou v geotermální oblasti.
-              <a href="https://goo.gl/maps/c6y7zZ8aM8B2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/prV5xxPZtcJ449Yu6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Urriðafoss:</strong> Široký a silný vodopád na
               řece Þjórsá, největší na Islandu.
-              <a href="https://goo.gl/maps/d8z9aA0bN9C2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/bxwCfbqgHyHviM3WA"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Kráter Kerið:</strong> Jedinečný sopečný kráter s
               tyrkysovou vodou.
-              <a href="https://goo.gl/maps/e9a0bB1cP0D2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/Wr4sosR9E26ASrhz8"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Geysir Geotermální Oblast:</strong> Domov slavného gejzíru
               Strokkur, který pravidelně vybuchuje.
-              <a href="https://goo.gl/maps/f0b1cC2dQ1E2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/hbFwTnc3SjoeazYHA"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Gullfoss:</strong> Jeden z nejkrásnějších vodopádů
               na Islandu, padající do kaňonu ve dvou kaskádách.
-              <a href="https://goo.gl/maps/g1c2dD3eR2F2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/mtcGqmqCmpougEXB9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+          <div class="boxContainer"></div>
+          <p>
+            <strong>Hotel Gullfoss</strong> Brattholt, Haukadalur, 801, Island
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/22-Gullfoss-Brattholt.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/6bESTGD4JesvbKsu6">Poloha</a>
+            </div>
+            <div class="boxUnPaid">
+              <p class="unPaid">Neplaceno Petr</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Úterý 23.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Úterý 23.9. - Hótel Dyrhólaey</h3>
+          <div style="text-align: left">
+            <h3>Úterý 23.9.</h3>
+            <h3>Hótel Dyrhólaey, Vík</h3>
+          </div>
           <span>~165 km, cca 2h 10min jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/n5TMo2Ms3Yic4EcP8"
+              >Trasa Brattholt > Vík</a
+            >
+          </div>
           <ul>
             <li>
               <strong>Vodopád Seljalandsfoss:</strong> Známý vodopád, za kterým
               se dá chodit.
-              <a href="https://goo.gl/maps/h2d3eE4fS3G2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/VRwj56pUFqms4gPx9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Gljúfrabúi:</strong> Skrytý vodopád, který se
               nachází v úzkém kaňonu.
-              <a href="https://goo.gl/maps/i3e4fF5gT4H2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/LpCS2KShubZCa2nn8"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Skógafoss:</strong> Mohutný a krásný vodopád, kde
               se často tvoří duha.
-              <a href="https://goo.gl/maps/j4f5gG6hU5I2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/hN75a6NXAEfn5mPE9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Letadlo Sólheimasandur:</strong> Vrak letadla amerického
               námořnictva na černé písečné pláži.
-              <a href="https://goo.gl/maps/k5g6hH7iV6J2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/k6zx4f8mGyXwFg538"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Dyrhólaey:</strong> Skalní oblouk a útes s výhledem na
               černou pláž a maják.
-              <a href="https://goo.gl/maps/l6h7iI8jW7K2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/ehCHrRFnWGV6ndbX9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Pláž Reynisfjara (Černá pláž):</strong> Slavná černá pláž
               s bazaltovými sloupy.
-              <a href="https://goo.gl/maps/m7i8jJ9kX8L2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/cpJSs1ZrDnMUd1jTA"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+          <div class="boxContainer"></div>
+          <p><strong>Hótel Dyrhólaey</strong> Brekkur, 871 Vík, Island</p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/23-Dyrhólaey-Vík.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/Fj4BoaKoqk9ProHE9">Poloha</a>
+            </div>
+            <div class="boxPaid">
+              <p class="paid">Placeno Petr</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Středa 24.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Středa 24.9. - Lilja Guesthouse</h3>
+          <div style="text-align: left">
+            <h3>Středa 24.9.</h3>
+            <h3>Lilja Guesthouse, Höfn</h3>
+          </div>
           <span>~210 km, cca 2h 40min jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/3MMxwz6g2vLcnVV88"
+              >Trasa Vík > Höfn</a
+            >
+          </div>
+
           <ul>
             <li>
               <strong>Vodopád Svartifoss:</strong> Jedinečný vodopád obklopený
               černými čedičovými sloupy.
-              <a href="https://goo.gl/maps/n8j9kK0lY9M2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/RD8zVaRF64Wui5WZ8"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
@@ -191,254 +381,427 @@
               <strong>Jökulsárlón (Ledovcová laguna):</strong> Laguna s
               plovoucími ledovci, které se odlamují z ledovce
               Breiðamerkurjökull.
-              <a href="https://goo.gl/maps/o9k0lLaZ0N2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/sZLy6GcAp8NxZx3MA"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Diamond Beach (Pláž s diamanty):</strong> Kousky ledovců
               na černé pláži připomínají diamanty.
-              <a href="https://goo.gl/maps/p0l1mMbA1O2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/4HoGERU9gpCvWKuX7"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Ledovcová laguna Fjallsárlón:</strong> Menší a klidnější
               ledovcová laguna.
-              <a href="https://goo.gl/maps/q1m2nNcB2P2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/Qujkce8kz9X2hsXm9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopády Hvalnes:</strong> Nádherný výhled na skály a
               oceán.
-              <a href="https://goo.gl/maps/r2n3oOdC3Q2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/5TmteVCTcv3tTTaJ6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Hofskirkja:</strong> Historický kostel s trávou na střeše.
-              <a href="https://goo.gl/maps/s3o4pPeD4R2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/BXix9CHFSGMgvtUw9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+
+          <div class="boxContainer"></div>
+          <p>
+            <strong>Lilja Guesthouse</strong> Hólabrekka Hólabrekka, Höfn, 781,
+            Island
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/24-Lilja-Höfn.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/Rwf4MK6bcbJQ6Cne9">Poloha</a>
+            </div>
+            <div class="boxPaid">
+              <p class="paid">Autoplatba Petr</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Čtvrtek 25.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Čtvrtek 25.9. - Hótel Valaskjálf</h3>
+          <div style="text-align: left">
+            <h3>Čtvrtek 25.9.</h3>
+            <h3>Hótel Valaskjálf, Egilsstadir</h3>
+          </div>
           <span>~140 km, cca 1h 50min jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/tmLmxRRWmPsqQvs98"
+              >Trasa Höfn > Egilsstadir</a
+            >
+          </div>
+
           <ul>
             <li>
               <strong>Vestrahorn (Stokksnes):</strong> Impozantní hora s
               dramatickou scenérií.
-              <a href="https://goo.gl/maps/t4p5qQfE5S2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/aFftTfxUK2GGJm9K6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Djúpivogur:</strong> Malebná rybářská vesnice s uměleckým
               dílem "Eggin í Gleðivík" (Vejce v zátoce radosti).
-              <a href="https://goo.gl/maps/u5q6rRgF6T2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/3vGHVCMj8msMPWcc7"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopády Nykurhylur (Dravidarlón):</strong> Krásné
               vodopády v odlehlé oblasti.
-              <a href="https://goo.gl/maps/v6r7sShG7U2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/3Cs13oR6HfsmcFLB6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Seyðisfjörður:</strong> Malebná vesnice v krásném fjordu,
               ideální pro procházky.
-              <a href="https://goo.gl/maps/w7s8tTiH8V2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/SqxJURTp5avqY9ez6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+          <div class="boxContainer"></div>
+          <p>
+            <strong>Hótel Valaskjálf</strong> Skógarlönd 6, 700 Egilsstadir,
+            Island
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/25-Valaskjáfl-Egilsstadir.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/cAzMGENf5gQf5PKt8">Poloha</a>
+            </div>
+            <div class="boxPaid">
+              <p class="paid">Placeno Martin</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Pátek 26.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Pátek 26.9. - Mývatn - Berjaya Iceland Hotels</h3>
+          <div style="text-align: left">
+            <h3>Pátek 26.9.</h3>
+            <h3>Berjaya Iceland Hotels, Mývatn</h3>
+          </div>
           <span>~160 km, cca 2h jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/RwRTonQSJ9rytSpA7"
+              >Trasa Egilsstadir > Mývatn</a
+            >
+          </div>
           <ul>
             <li>
               <strong>Vodopád Hengifoss:</strong> Třetí nejvyšší vodopád na
               Islandu s červenými a černými vrstvami skály.
-              <a href="https://goo.gl/maps/x8t9uUjI9W2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/35SS5Dy5RrcZEoah8"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Dettifoss:</strong> Nejsilnější vodopád v Evropě,
               nacházející se v národním parku Vatnajökull.
-              <a href="https://goo.gl/maps/y9u0vVkJ0X2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/q62mM7SVRdCpwSfX7"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Geotermální oblast Hverir:</strong> Barevné bahno, sirné
               fumaroly a horké prameny s výrazným zápachem.
-              <a href="https://goo.gl/maps/z0v1wWlK1Y2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/HwFZnDjoRhRBkiuB6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Jezero Mývatn:</strong> Krásné jezero s bohatým ptačím
               životem a pseudokrátery.
-              <a href="https://goo.gl/maps/a1w2xXmL2Z2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/AMd4MiAaLVYuqwti6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Skálholt:</strong> Historické místo s jednou z nejstarších
               kostelů na Islandu.
-              <a href="https://goo.gl/maps/b2x3yYmN3A2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/N5YaxXuZJSFH2CqAA"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+          <div class="boxContainer"></div>
+          <p>
+            <strong>Berjaya Iceland Hotels</strong> Blikavöllur 2, 235 Keflavík,
+            Island
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/26-Berjaya-Mývatn.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/XPsEYgjbPdHkyJm98">Poloha</a>
+            </div>
+            <div class="boxPaid">
+              <p class="paid">Placeno Martin</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Sobota 27.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Sobota 27.9. - Hafdals Hotel</h3>
+          <div style="text-align: left">
+            <h3>Sobota 27.9.</h3>
+            <h3>Hafdals Hotel, Akureyri</h3>
+          </div>
           <span>~80 km, cca 1h jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/od46FyLTS9dmwaD1A"
+              >Trasa Mývatn > Akureyri</a
+            >
+          </div>
+
           <ul>
             <li>
               <strong>Vodopád Goðafoss:</strong> Jeden z nejznámějších vodopádů,
               kde byly do řeky vhozeny pohanské sochy.
-              <a href="https://goo.gl/maps/c3y4zZnO4B2" target="_blank"
-                >Zobrazit na mapě</a
-              >
+              <a href="https://maps.app.goo.gl/nyQkYsaEd5T5cr8j9" target="_blank">Zobrazit na mapě</a>
             </li>
             <li>
               <strong>Akureyri:</strong> Hlavní město severu Islandu s
               botanickou zahradou a malebným přístavem.
-              <a href="https://goo.gl/maps/d4z5aAoP5C2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/fwTPQiFF8ia36Dq27"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Dynjandi:</strong> Nádherný vodopád ve tvaru
               závoje v Západních fjordech.
-              <a href="https://goo.gl/maps/e5a6bBpQ6D2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/9Vf7QY6NnjMhH6247"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+
+          <div class="boxContainer"></div>
+          <p>
+            <strong>Hafdals Hotel</strong> Stekkjarlækur, 601 Akureyri, Island
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/27-Hafdals-Akureyri.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/ipRAwsHbSY77o7Sj8">Poloha</a>
+            </div>
+            <div class="boxPaid">
+              <p class="paid">Placeno Martin</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Neděle 28.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Neděle 28.9. - Thingholt by Center Hotels</h3>
+          <div style="text-align: left">
+            <h3>Neděle 28.9.</h3>
+            <h3>Thingholt by Center Hotels</h3>
+          </div>
           <span>~385 km, cca 4h 45min jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/ZpUuRVyms6h8cetK6"
+              >Trasa Akureyri > Reykjavík</a
+            >
+          </div>
+
           <ul>
             <li>
               <strong>Přírodní rezervace Hólmavík:</strong> Malebné místo v
               Západních fjordech s bohatou historií.
-              <a href="https://goo.gl/maps/f6b7cCrR7E2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/Hq8WvXobcpSx8kNt6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Kirkjufell:</strong> Hora ve tvaru šípu s krásným
               vodopádem v blízkosti.
-              <a href="https://goo.gl/maps/g7c8dDsS8F2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/BdcMuBrK1f7pFp2S9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Národní park Snæfellsjökull:</strong> Zahrnuje ledovec a
               sopku, místo s krásnou přírodou.
-              <a href="https://goo.gl/maps/h8d9eEtT9G2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/MbP3ocREk5u3efys6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Vodopád Hraunfossar:</strong> Krásné vodopády, které
               vytékají z lávového pole.
-              <a href="https://goo.gl/maps/i9e0fFuU0H2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/bNWx9gvbPcyecruLA"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Reykjavík:</strong> Hlavní město Islandu s mnoha
               kulturními památkami a restauracemi.
-              <a href="https://goo.gl/maps/j0f1gGvV1I2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/x1WYtx8iMVCXL36i6"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Národní park Þingvellir:</strong> Místo setkání
               nejstaršího parlamentu na světě.
-              <a href="https://goo.gl/maps/k1g2hHwW2J2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/2p2xcvJQksFaMKZ38"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
           </ul>
+
+          <div class="boxContainer"></div>
+          <p>
+            <strong>Thingholt by Center Hotels</strong> Thingholtsstraeti 3-5,
+            101 Reykjavík, Island
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/28-30_Thingholt-Reykjavík.pdf">Hotel</a>
+            </div>
+            <div class="box">
+              <a href="https://maps.app.goo.gl/5Y5WR1y2oTMPaGKw6">Poloha</a>
+            </div>
+            <div class="boxPaid">
+              <p class="paid">Placeno Martin</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!--  Pondělí 29.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Pondělí 29.9. - Thingholt by Center Hotels</h3>
+          <div style="text-align: left">
+            <h3>Pondělí 29.9.</h3>
+            <h3>Thingholt by Center Hotels</h3>
+          </div>
           <span>Pobyt v Reykjavíku a okolí</span>
         </div>
         <div class="day-content">
-          <p>
-            Tento den strávíte v Reykjavíku a jeho okolí, takže doba jízdy je
-            flexibilní a závisí na tom, co se rozhodnete navštívit.
-          </p>
           <ul>
             <li>
               <strong>Hallgrímskirkja:</strong> Ikona Reykjavíku, moderní kostel
               s vyhlídkou na celé město.
-              <a href="https://goo.gl/maps/l2h3iIxX3K2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/1aT9ee2vCTxxCizS8"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Perlan:</strong> Kruhová budova s vyhlídkou, muzeum a
               restaurace.
-              <a href="https://goo.gl/maps/m3i4jJyY4L2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/gqbcZuvju4n6fgsc7"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Harpa Concert Hall:</strong> Moderní koncertní hala s
               unikátní skleněnou fasádou.
-              <a href="https://goo.gl/maps/n4j5kKzZ5M2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/HRWQxdQAU8t37hZU9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Blue Lagoon:</strong> Slavné geotermální lázně nedaleko
               Reykjavíku.
-              <a href="https://goo.gl/maps/o5k6lLaA6N2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/S1ZmZYV1AwbrDZML7"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
             <li>
               <strong>Starý přístav:</strong> Místo, kde se nachází spousta
               restaurací, kaváren a obchodů.
-              <a href="https://goo.gl/maps/p6l7mMbB7O2" target="_blank"
+              <a
+                href="https://maps.app.goo.gl/5GvZUKZMUikMwwCw9"
+                target="_blank"
                 >Zobrazit na mapě</a
               >
             </li>
@@ -446,20 +809,106 @@
         </div>
       </div>
 
+      <!--  Úterý 30.9.  -->
       <div class="day">
         <div class="day-header">
-          <h3>Úterý 30.9. - Odlet</h3>
+          <div style="text-align: left">
+            <h3>Úterý 30.9.</h3>
+            <h3>Odlet</h3>
+          </div>
           <span>Odjezd na letiště Keflavík, cca 45 min jízdy</span>
         </div>
         <div class="day-content">
+          <div class="box">
+            <a href="https://maps.app.goo.gl/rXVFuYVGtcmUmLms8"
+              >Trasa Reykjavík > Keflavík</a
+            >
+          </div>
+          <p>Výjezd z hotelu po 6:00</p>
+          <p>Cesta na letiště trvá: 45 minut</p>
+          <p>Předání auta (drop off): 7:00</p>
+          <p><strong>Booking reference ZATQQC</strong></p>
+                  <div class="boxContainer"></div> 
           <p>
-            Poslední den si užijte snídani a s dostatečným předstihem se vydejte
-            na letiště Keflavík pro odlet domů.
+            Scandinavian SAS Go Smart
+            <strong>Let SK596 3h 5min</strong>
           </p>
+          <p>Airbus A320neo - Booking class N</p>
+          <p>odlet 10:20 Airport Keflavík</p>
+          <p>přílet 15:25 Kodaň - Terminal 3</p>
+        <div class="boxContainer"></div> 
+          <p>
+            Scandinavian Airlines
+            <strong>Let SK1761 1h 15min</strong></p><p>
+            Airbus A319 - Booking class N
+          </p>
+          <p>odlet 19:00 Kodaň - Terminal 3</p>
+          <p>přílet 20:15 Praha - Terminal 2</p>
+                  <div class="boxContainer"></div>           
+          <p>Malá taška: 40x30x15 cm</p>
+          <p>Příruční taška: 8 kg 55x40x23 cm</p>
+          <p>Velké zavazadlo: 23 kg</p>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/odlet-Martin-619655.pdf">Letenka Martin</a>
+              E-Ticket 117-2533892377
+            </div>
+            <div class="box">
+              <a href="asset/odlet-Alenka-619656.pdf">Letenka Alenka</a>
+              E-Ticket 117-2533892378
+            </div>
+          </div>
+          <div class="boxContainer">
+            <div class="box">
+              <a href="asset/odlet-Petr-619657.pdf">Letenka Petr</a>
+              E-Ticket 117-2533892380
+            </div>
+            <div class="box">
+              <a href="asset/odlet-Eva-619658.pdf">Letenka Eva</a>
+              E-Ticket 117-2533892379
+            </div>
+          </div>
+          <div class="box">
+            <a href="asset/odlet SAS - info.pdf">SAS - kompletní info o letu</a>
+          </div>
+        </div>
+      </div>
+
+      <!--  Náklady  -->
+      <div class="day">
+        <div class="day-header" style="background-color: blueviolet">
+          Náklady
+        </div>
+
+        <div class="day-content">
+          <p>M* Letenka na Island: 5830 Kč/os</p>
+          <p>Půjčení auta: 34411 Kč/pár = 17206 Kč/os</p>
+          <p>P* Aurora Hotel, Keflavík: 7338 Kč/os</p>
+          <p>P* Hotel Gullfoss, Brattholt: 503 EUR = 3058 Kč/os</p>
+          <p>P* Hótel Dyrhólaey, Vík: 3864 Kč/os</p>
+          <p>P* Lilja Guesthouse, Höfn: 727 EUR = 4419 Kč/os</p>
+          <p>M* Hótel Valaskjálf, Egilsstadir: 4139 Kč/os</p>
+          <p>
+            M* Berjaya Iceland Hotels, Mývatn: Fal 3880 Kč/os Vys 5230 Kč/os
+          </p>
+          <p>M* Hafdals Hotel, Akureyri: 3800 Kč/os</p>
+          <p>M* Thingholt (2 noci), Reykjavík: 7338 Kč/os</p>
+          <p>M* Letenka do Prahy: 8159 Kč/os</p>
+          <div class="boxContainer"></div>
+          <p>
+            Fal za Vys: =5830*2+4139*2+5230*2+3800*2+7338*2+8159*2 = 68 992 Kč
+          </p>
+          <p>Vys za Fal: =7338*2+3058*2+3864*2+4419*2 = 37 358 Kč</p>
+          <p>Rozdíl: 31634 Kč Vys > Fal</p>
+          <div class="boxContainer"></div>
+          <strong>Průměr na osobu</strong>
+          <p>Letenka tam-zpět: 7000 Kč</p>
+          <p>Auto: 17200 Kč</p>
+          <p>Ubytování 8 nocí: 30500 Kč (cca 3800 Kč/noc)</p>
+          <p><strong>Celkem: 54700 Kč/os</strong></p>
         </div>
       </div>
     </div>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const dayHeaders = document.querySelectorAll(".day-header");
