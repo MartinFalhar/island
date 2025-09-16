@@ -1,0 +1,24 @@
+        
+        <div class="box">
+            <a href="https://maps.app.goo.gl/jKQ2gZ7hQf4LdrYY6">Trasa Keflavík > Brattholt</a>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div class="boxContainer"></div> 
+        <p><strong>Aurora Hotel at Reykjavik-Keflavik Airport Terminal</strong>	Blikavöllur 2, 235 Keflavík, Island</p>
+        <div class="boxContainer">
+        <div class="box">
+            <a href="asset/21-Aurora-Keflavík.pdf">Hotel</a>
+        </div>
+        <div class="box">
+            <a href="https://maps.app.goo.gl/ZzJNL3tqA9tW29ec9">Poloha</a>
+        </div>
+        <div class="boxPaid">
+            <p class="paid">Placeno Petr</p>
+        </div>
+        </div>
